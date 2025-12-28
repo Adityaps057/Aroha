@@ -12,7 +12,7 @@ export default function ProductCard({ product }) {
             {/* Image Container with Hover Effect */}
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-beige-200">
                 <img
-                    src={product.image}
+                    src={`${import.meta.env.BASE_URL}${product.image.replace(/^\//, '')}`}
                     alt={product.name}
                     className="h-full w-full object-cover transition-transform duration-500 will-change-transform group-hover:scale-110"
                     loading="lazy"
